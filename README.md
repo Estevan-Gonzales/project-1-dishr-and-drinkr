@@ -1,4 +1,5 @@
-# Dishr and Drinkr
+![dishr   Drinkr (2)](https://github.com/Estevan-Gonzales/project-1-placeholder/assets/145223393/9866fb79-18ae-454f-a95c-731f202bae6a)
+
 
 The main problem we see today is people have half full pantrys. but have no clue what to make with all the ingredients on hand
 and the same goes for cocktails, we have the stuff to make them, but what do we make? Dishr and Drinkr are here to help!
