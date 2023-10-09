@@ -17,16 +17,8 @@ Dishr & Drinkr's main functionality is to Assist people find recipes for the ing
 To Get Started Click on either Gif / Image and input the ingredients for either or, and it will display recipes matching the ingredient the user has inputed as well as drop down menus to select through the catergories of food/drink and area.
 
 ### Installing
+
 N/A
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-
-```
-code blocks for commands
-```
 
 ## Help
 
