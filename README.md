@@ -4,6 +4,7 @@ The main problem we see today is people have half full pantrys. but have no clue
 and the same goes for cocktails, we have the stuff to make them, but what do we make? Dishr and Drinkr are here to help!
 
 ## Mockup Image
+![image_720](https://github.com/Estevan-Gonzales/project-1-placeholder/assets/145223393/1fccbc72-9c6c-40ca-babd-ec685369846c)
 
 
 ## Description
