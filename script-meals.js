@@ -6,6 +6,8 @@ var buttonSearchEl = document.getElementById('btn-search');
 
 var mealListEl = document.getElementById('meal-list');
 
+var mealDetailsEl = document.getElementById('meal-details')
+
 function populateIngredientsLists() {
     var requestUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?i=list';
     localStorage.clear();
@@ -60,10 +62,17 @@ function getMeals(event) {
             var listItem = document.createElement('div');
             //listItem.textContent = data.meals[i].strMeal;
             listItem.textContent = data.meals[i].strMeal;
+            mealListEl.addEventListener('click', retrieveMealDetails);
+            localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal)
             mealListEl.appendChild(listItem);
     
         }
     });
+}
+
+function retrieveMealDetails(event) {
+    console.log(localStorage.getItem(event.srcElement.textContent));
+    mealDetailsEl.textContent = localStorage.getItem(event.srcElement.textContent);
 }
 
 populateIngredientsLists();
