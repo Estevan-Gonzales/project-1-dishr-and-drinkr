@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="box has-background-grey has-text-white">
 
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="./css/style-food-recipe.css">
         <title>Dishr</title>
     </head>
 
-    <body>
-        <form>
+<header class="has-background-grey has-text-white">
+    <h1 class="center ">Choose Your Ingredients in the Fields Below!</h1>
+</header>    
+
+    <body class="box has-background-grey has-text-white">
+        <form class="box has-background-grey has-text-white">
             <div class="select">
                 <select id="ingredient-list-one">
                     <option>No Selection</option>
@@ -26,15 +31,16 @@
                 </select>
             </div>
 
-            <button id='btn-search' class="button">Search Meals</button>
+            <button id='btn-search' class="button is-success">Search Meals</button>
 
             <div id="meal-content" style="display:block">
                 <section>
-                    <ul id="meal-list" style="background-color: aliceblue;"></ul>
+
+                    <ul id="meal-list"style="background-color: gray;"></ul>
                 </section>
 
                 <section id="details-section" style="position:relative">
-                    <div id="meal-details" style="background-color: bisque";></div>
+                    <div id="meal-details" class="has-background-grey has-text-white" style="background-color: rgb(100, 100, 100)";></div>
                     <div id="meal-ingredients"></div>
                 </section>
             </div>

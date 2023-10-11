@@ -73,6 +73,7 @@ function getMeals(event) {
             var listItem = document.createElement('div');
             listItem.textContent = "Sorry, no meals found. Try another search."
             mealListEl.append(listItem);
+            listItem.style.fontSize = "25px";
         } else {
             for(i = 0; i < data.meals.length; i++) {
                 //localStorage.setItem(i, data.meals[i].strMeal);
@@ -82,7 +83,9 @@ function getMeals(event) {
                 mealListEl.addEventListener('click', retrieveMealDetails);
                 localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal)
                 mealListEl.appendChild(listItem);
-        
+                listItem.style.fontSize = "20px";
+                listItem.style.textDecoration = "underline";
+                listItem.style.marginTop = "25px";    
             }
         }
     });
@@ -135,15 +138,25 @@ function retrieveMealDetails(event) {
         }
 
         mealDetailsEl.append(unorderedList);
-
-
-
+        
         var listItem = document.createElement('div');
 
         listItem.textContent = data.meals[0].strInstructions;
         console.log(data);
 
         mealDetailsEl.appendChild(listItem);
+
+        listItem.style.backgroundColor = "black";  
+        listItem.style.fontSize = "20px";
+        listItem.style.flexWrap = "wrap";
+        unorderedList.style.fontSize = "20px";
+        unorderedList.style.backgroundColor = "black";
+        unorderedList.style.marginBottom = "50px";
+        unorderedList.style.marginTop = "25px";
+        unorderedList.style.textAlign = "center";
+
+
+        //listItem.textContent = data.meals[0].
     })
 };
 
