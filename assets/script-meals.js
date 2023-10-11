@@ -75,11 +75,16 @@ function getMeals(event) {
             mealListEl.append(listItem);
             listItem.style.fontSize = "25px";
         } else {
-            for(i = 0; i < data.meals.length; i++) {
-                //localStorage.setItem(i, data.meals[i].strMeal);
+            for (i = 0; i < data.meals.length; i++) {
+                var mealName = data.meals[i].strMeal;
+                var wordsOfMealName = mealName.split(" ");
+                console.log(wordsOfMealName);
+                for (var j = 0; j < wordsOfMealName.length; j++) {
+                    wordsOfMealName[j] = wordsOfMealName[j][0].toUpperCase() + wordsOfMealName[j].substr(1);
+                }
+                mealName = wordsOfMealName.join(" ");
                 var listItem = document.createElement('div');
-                //listItem.textContent = data.meals[i].strMeal;
-                listItem.textContent = data.meals[i].strMeal;
+                listItem.textContent = mealName
                 mealListEl.addEventListener('click', retrieveMealDetails);
                 localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal)
                 mealListEl.appendChild(listItem);
