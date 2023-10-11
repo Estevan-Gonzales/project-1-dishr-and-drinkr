@@ -1,12 +1,16 @@
 
 div {
   justify-content: center;
+  font-family: "Cormorant Garamond";
+}
+p {
+  flex-wrap: wrap;
 }
 
 .background {
   background-image: url("https://imgur.com/xdJuARg.jpg");
   background-size: 450px;
-  border: 2px solid;
+  background-color: black;
 }
 
 img {
@@ -15,6 +19,7 @@ img {
 
 
 .hoverable {
+    flex-wrap: wrap;
     display: inline-flex;
     justify-content: start;
     width: 50vw;
@@ -27,6 +32,7 @@ img {
 
 
   .hoverable1 {
+    flex-wrap: wrap;
     display: inline-flex;
     justify-content: right;
     width: 50vw;
@@ -59,6 +65,7 @@ img {
 
   .center {
     position: relative;
+    top: -75px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -98,4 +105,8 @@ img {
   .img__wrap1:hover .img__description1 {
     visibility: visible;
     opacity: 1;
+  }
+
+  .flexy {
+  display: flex;
   }
