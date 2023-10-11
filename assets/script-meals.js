@@ -88,9 +88,11 @@ function getMeals(event) {
                 mealListEl.addEventListener('click', retrieveMealDetails);
                 localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal)
                 mealListEl.appendChild(listItem);
-                listItem.style.fontSize = "20px";
+                listItem.style.fontSize = "30px";
                 listItem.style.textDecoration = "underline";
                 listItem.style.marginTop = "25px";    
+                listItem.style.fontFamily = "Cormorant Garamond";
+
             }
         }
     });
