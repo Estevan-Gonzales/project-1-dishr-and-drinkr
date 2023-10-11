@@ -156,6 +156,7 @@ function retrieveMealDetails(event) {
         unorderedList.style.textAlign = "center";
 
 
+
         //listItem.textContent = data.meals[0].
     })
 };
