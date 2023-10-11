@@ -8,11 +8,7 @@ and the same goes for cocktails, we have the stuff to make them, but what do we 
 
 ## Mockup Image
 
-![image_720](https://github.com/Estevan-Gonzales/project-1-placeholder/assets/145223393/1fccbc72-9c6c-40ca-babd-ec685369846c)
-
-
-
-
+![Alt text](image.png)
 
 
 
@@ -50,8 +46,6 @@ Jquery UI - (https://api.jqueryui.com/)
 TheMealDB - (https://www.themealdb.com/api.php)
 
 TheCocktailDB - (https://www.thecocktaildb.com/api.php)
-
-Web Speech API - (https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 
 ## License
 
