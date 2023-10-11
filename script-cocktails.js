@@ -78,7 +78,11 @@ function getCocktails(event) {
                 drinkListEl.addEventListener('click', retrievedrinkDetails);
                 localStorage.setItem(data.drinks[i].strDrink, data.drinks[i].idDrink)
                 drinkListEl.appendChild(listItem);
-        
+                listItem.style.fontSize = "30px";
+                listItem.style.textDecoration = "underline";
+                listItem.style.marginTop = "25px";    
+                listItem.style.fontFamily = "Cormorant Garamond";
+                
             }
         }
     });
@@ -116,9 +120,14 @@ function retrievedrinkDetails(event) {
 
         drinkDetailsEl.appendChild(listItem);
 
-
-
-
+        listItem.style.backgroundColor = "black";  
+        listItem.style.fontSize = "20px";
+        listItem.style.flexWrap = "wrap";
+        unorderedList.style.fontSize = "20px";
+        unorderedList.style.backgroundColor = "black";
+        unorderedList.style.marginBottom = "50px";
+        unorderedList.style.marginTop = "25px";
+        unorderedList.style.textAlign = "center";
     })
 };
 
