@@ -18,8 +18,8 @@ function populateIngredientsLists() {
     })
     .then(function (data) {
         console.log(data);
-        for(i = 0; i < data.meals.length; i++) {
-            localStorage.setItem(i, data.meals[i].strIngredient);
+        for (i = 0; i < data.meals.length; i++) {
+            //localStorage.setItem(i, data.meals[i].strIngredient);
             var listItemOne = document.createElement('option');
             listItemOne.textContent = data.meals[i].strIngredient;
             ingredientListOneEl.appendChild(listItemOne);
@@ -69,9 +69,9 @@ function getMeals(event) {
     .then(function (data) {
         console.log(data);
 
-        if (!data) {
+        if (data.meals == null) {
             var listItem = document.createElement('div');
-            listItem.textContent = "Sorry, no meals found :("
+            listItem.textContent = "Sorry, no meals found. Try another search."
             mealListEl.append(listItem);
         } else {
             for(i = 0; i < data.meals.length; i++) {
@@ -101,14 +101,37 @@ function retrieveMealDetails(event) {
         return response.json();
     })
     .then(function (data) {
-        //console.log(data);
+        console.log(data);
         var unorderedList = document.createElement('ul');
 
-        for (i = 1; i < 21; i++) {
+        var i = 1;
+        while (i < 21) {
             var parameter = "strIngredient" + i;
-            var listItem = document.createElement('li');
-            listItem.textContent = data.meals[0][parameter];
-            unorderedList.append(listItem);
+            var strIngredient = data.meals[0][parameter];
+            if (strIngredient == undefined || strIngredient.trim() == "" || strIngredient == null) {
+                i = 30;
+            }
+            else {
+                var listItem = document.createElement('li');
+                console.log(strIngredient);
+                //Capitalize the ingredients with the following algorithm
+                var wordsOfMealName = strIngredient.split(" ");
+                console.log(wordsOfMealName);
+                var j = 0;
+                while (j < wordsOfMealName.length) {
+                    if (wordsOfMealName[j][0] == undefined) {
+                        j = wordsOfMealName.length + 10;
+                    } else {
+                        wordsOfMealName[j] = wordsOfMealName[j][0].toUpperCase() + wordsOfMealName[j].substr(1);
+                        j++;
+                    }
+                }
+                mealName = wordsOfMealName.join(" ");
+                listItem.textContent = i + ".) " + mealName;
+                unorderedList.append(listItem);
+                console.log("While-loop finished");
+                i++;
+            }
         }
 
         mealDetailsEl.append(unorderedList);
@@ -121,11 +144,6 @@ function retrieveMealDetails(event) {
         console.log(data);
 
         mealDetailsEl.appendChild(listItem);
-
-
-
-
-        //listItem.textContent = data.meals[0].
     })
 };
 
