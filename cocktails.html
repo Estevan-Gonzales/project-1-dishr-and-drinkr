@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="box has-background-grey has-text-white">
 
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Oleo+Script&family=Trirong:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style-food-recipe.css">
         <title>Dishr</title>
     </head>
 
-    <body>
-        <form>
+    <header class="has-background-grey has-text-white">
+        <h1 class="center">Choose Your Drinks in the Fields Below!</h1>
+    </header>
+
+    <body class="box has-background-grey has-text-white">
+        <form class="box has-background-grey has-text-white">
             <div class="select">
                 <select id="ingredient-list-one">
                     <option>No Selection</option>
@@ -26,26 +32,19 @@
                 </select>
             </div>
 
-            <button id='btn-search' class="button">Search Cocktails</button>
+            <button id='btn-search' class="button is-success">Search Cocktails</button>
 
             <div id="drink-content" style="display:block">
                 <section>
-                    <ul id="drink-list" style="background-color: aliceblue;"></ul>
+                    <ul id="drink-list" style="background-color: gray;"></ul>
                 </section>
 
                 <section id="details-section" style="position:relative">
-                    <div id="drink-details" style="background-color: bisque";></div>
+                    <div id="drink-details" class="has-background-grey has-text-white" style="background-color: gray";></div>
                     <div id="drink-ingredients"></div>
                 </section>
             </div>
-
-
-
         </form>
-
-
         <script src="script-cocktails.js"></script>
-        
     </body>
-
 </html>

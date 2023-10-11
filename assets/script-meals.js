@@ -92,7 +92,7 @@ function getMeals(event) {
                 listItem.style.textDecoration = "underline";
                 listItem.style.marginTop = "25px";    
                 listItem.style.fontFamily = "Cormorant Garamond";
-
+                
             }
         }
     });
