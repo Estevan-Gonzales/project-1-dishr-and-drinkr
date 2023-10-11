@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html class="background">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dishr & Drinkr!</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
 
   <body>
+    <header> 
+ <h1 class="logo center"> <img class="imgsize" src="./assets/images/dishrDrinkr.png" alt="Logo/Dishr and Drinkr"/> </h1>
+    </header>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Pick your Category
-      </h1>
-      <p class="subtitle">
-        Dish or Drink. <strong>Choose!</strong>!
-      </p>
+ 
+
+        <a href="./assets/cocktail-recipe.html"><div class="hoverable img__wrap column is-large">
+<img class="img__img" src="./assets/images/Screenshot_1.png" id="hover-img" alt="Delete image"/>
+<p class="img__description">Click Me to go to the Cocktail Finder</p>
+        </div></a>
+
+      <a href="./assets/food-recipe.html"><div class="hoverable1 img__wrap1 column is-large">
+ <img class="img__img" src="./assets/images/Screenshot_2.png" id="hover-img1" alt="Delete image"/>
+ <p class="img__description1 ">Click Me to go to the Recipe Finder</p>
+      </div></a>
+
     </div>
   </section>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./assets/js/script-food-recipe.js"></script>
   </body>
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
 </html>
-<!-- This HTML template was copied by Bulma from https://bulma.io/documentation/overview/start/ -->
+
