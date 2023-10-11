@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <title>Dishr</title>
+    </head>
+
+    <body>
+        <form>
+            <div class="select">
+                <select id="ingredient-list-one">
+                    <option>No Selection</option>
+                </select>
+            </div>
+            <div class="select">
+                <select id="ingredient-list-two">
+                    <option>No Selection</option>
+                </select>
+            </div>
+            <div class="select">
+                <select id="ingredient-list-three">
+                    <option>No Selection</option>
+                </select>
+            </div>
+
+            <button id='btn-search' class="button">Search Cocktails</button>
+
+            <div id="drink-content" style="display:block">
+                <section>
+                    <ul id="drink-list" style="background-color: aliceblue;"></ul>
+                </section>
+
+                <section id="details-section" style="position:relative">
+                    <div id="drink-details" style="background-color: bisque";></div>
+                    <div id="drink-ingredients"></div>
+                </section>
+            </div>
+
+
+
+        </form>
+
+
+        <script src="script-cocktails.js"></script>
+        
+    </body>
+
+</html>
