@@ -59,9 +59,6 @@ function getMeals(event) {
 
     console.log(requestUrl);
 
-
-    //localStorage.clear();
-  // replace `octocat` with anyone else's GitHub username
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
@@ -84,9 +81,9 @@ function getMeals(event) {
                 }
                 mealName = wordsOfMealName.join(" ");
                 var listItem = document.createElement('div');
-                listItem.textContent = mealName
+                listItem.textContent = mealName;
                 mealListEl.addEventListener('click', retrieveMealDetails);
-                localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal)
+                localStorage.setItem(data.meals[i].strMeal, data.meals[i].idMeal);
                 mealListEl.appendChild(listItem);
                 listItem.style.fontSize = "30px";
                 listItem.style.textDecoration = "underline";
@@ -117,16 +114,18 @@ function retrieveMealDetails(event) {
         var i = 1;
         while (i < 21) {
             var parameter = "strIngredient" + i;
-            var strIngredient = data.meals[0][parameter];
-            if (strIngredient == undefined || strIngredient.trim() == "" || strIngredient == null) {
+            if (data.meals == null || data.meals[0][parameter] == null || data.meals[0][parameter] == undefined || data.meals[0][parameter].trim() == "") {
                 i = 30;
             }
             else {
+                var parameterMeasure = "strMeasure" + i;
+                var strIngredient = data.meals[0][parameter];
+                var strIngredientMeasure = data.meals[0][parameterMeasure];
                 var listItem = document.createElement('li');
-                console.log(strIngredient);
+                //console.log(strIngredient);
                 //Capitalize the ingredients with the following algorithm
                 var wordsOfMealName = strIngredient.split(" ");
-                console.log(wordsOfMealName);
+                //console.log(wordsOfMealName);
                 var j = 0;
                 while (j < wordsOfMealName.length) {
                     if (wordsOfMealName[j][0] == undefined) {
@@ -137,30 +136,37 @@ function retrieveMealDetails(event) {
                     }
                 }
                 mealName = wordsOfMealName.join(" ");
-                listItem.textContent = i + ".) " + mealName;
+                listItem.textContent = i + ".) " + mealName  + " --- " + strIngredientMeasure;
                 unorderedList.append(listItem);
-                console.log("While-loop finished");
+                //console.log("While-loop finished");
                 i++;
             }
         }
 
-        mealDetailsEl.append(unorderedList);
+        if (data.meals == null) {
+            var listItem = document.createElement('div');
+            listItem.textContent = "Error! The Food Database has faulty and/or missing information. Try another recipe."
+            mealListEl.append(listItem);
+            listItem.style.fontSize = "25px";
+        } else {
+            mealDetailsEl.append(unorderedList);
         
-        var listItem = document.createElement('div');
+            var listItem = document.createElement('div');
 
-        listItem.textContent = data.meals[0].strInstructions;
-        console.log(data);
+            listItem.textContent = data.meals[0].strInstructions;
 
-        mealDetailsEl.appendChild(listItem);
+            mealDetailsEl.appendChild(listItem);
 
-        listItem.style.backgroundColor = "black";  
-        listItem.style.fontSize = "20px";
-        listItem.style.flexWrap = "wrap";
-        unorderedList.style.fontSize = "20px";
-        unorderedList.style.backgroundColor = "black";
-        unorderedList.style.marginBottom = "50px";
-        unorderedList.style.marginTop = "25px";
-        unorderedList.style.textAlign = "center";
+            listItem.style.backgroundColor = "black";  
+            listItem.style.fontSize = "20px";
+            listItem.style.flexWrap = "wrap";
+            unorderedList.style.fontSize = "20px";
+            unorderedList.style.backgroundColor = "black";
+            unorderedList.style.marginBottom = "50px";
+            unorderedList.style.marginTop = "25px";
+            unorderedList.style.textAlign = "center";
+        }
+        
 
 
 
